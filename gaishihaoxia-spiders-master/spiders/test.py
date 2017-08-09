@@ -82,10 +82,7 @@ if __name__ == "__main__":
 
     base_url = "http://www.pingan.com"
     s = requests.Session()
-    # r = s.get("http://www.pingan.com")
-    # r.encoding = 'utf-8'
-    # pa_html = r.text
-    # =========================================================
+
     pa_html = get_html(base_url)
     urls = get_links(pa_html)
     parse_url(urls)
