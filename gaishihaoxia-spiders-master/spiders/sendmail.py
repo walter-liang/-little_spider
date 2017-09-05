@@ -8,8 +8,8 @@ from email.mime.multipart import MIMEMultipart
 #message = {"df": "i know that "}
 #messages = str(message)
 #urlnums = 208
-my_sender = '13631671805m@sina.cn'
-my_user = 'ex-liangkangjian001@pingan.com.cn ,494518881@qq.com'
+my_sender = '******@sina.cn'
+my_user = '*******@pingan.com.cn'
 
 
 def fa_mail(message, urlnums):
@@ -34,7 +34,7 @@ def fa_mail(message, urlnums):
         msg['Subject'] = "URL监控结果" #邮件的主题，也可以说是标题
 
         server = smtplib.SMTP("smtp.sina.com", 25)  #发件人邮箱中的SMTP服务器，端口是25
-        server.login(my_sender, "qweqwe123")    #括号中对应的是发件人邮箱账号、邮箱密码
+        server.login(my_sender, "****")    #括号中对应的是发件人邮箱账号、邮箱密码
         server.sendmail(my_sender, my_user.split(","), msg.as_string())   #括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
         server.quit()   #这句是关闭连接的意思
     except Exception as e:   #如果try中的语句没有执行，则会执行下面的ret=False
